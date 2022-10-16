@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --grayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --veryLightGrayishCyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --strongCyan: hsl(172, 67%, 45%);
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Epilogue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--lightGrayishCyan);
+  text-align: center;
+  font-weight: 700;
+}
+
+main{
+  width: 70%;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  background-color: whitesmoke;
+  border-radius: 25px;
+}
+
+main form{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 100%;
+  margin-right: 15px;
+  border-radius: 25px;
+}
+
+
+main form .input-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main form .input-group label,main form .tip-box label{
+  font-size: 16px;
+  color: var(--veryDarkCyan);
+  font-weight: 500;
+}
+
+main form .input-group .warning{
+  color: red;
+  font-size: 16px;
+ float: right;
+}
+
+main form .input-group .label-group{
+  margin-bottom: 10px;
+}
+
+main form .input-group input{
+  font-size: 24px;
+  color: var(--veryDarkCyan);
+  font-weight: 700;
+  text-align: right;
+  border: 0;
+  background-color: var(--veryLightGrayishCyan);
+  background-repeat: no-repeat;
+  background-position: 3px center;
+  border-radius: 10px;
+}
+
+main form .input-group input.Bill{
+  background-image: url(./images/icon-dollar.svg);
+  outline-color: var(--strongCyan);
+}
+
+main form .input-group input.personA{
+  background-image: url(./images/icon-person.svg);
+  outline-color: var(--strongCyan);
+}
+
+main form .input-group input.personB{
+  background-image: url(./images/icon-person.svg);
+  outline-color: red;
+}
+
+main form .tip-box .btn-box{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 40px 40px;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+}
+
+main form .tip-box .btn-box a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+.tipA{
+  color: white;
+  background-color: var(--veryDarkCyan);
+}
+
+.tipB{
+  color: var(--veryDarkCyan);
+  background-color: var(--strongCyan);
+}
+
+main form .tip-box .btn-box input{
+  font-size: 24px;
+  color: var(--veryDarkCyan);
+  font-weight: 700;
+  text-align: center;
+  border: 0;
+  background-color: var(--veryLightGrayishCyan);
+  outline-color: var(--strongCyan);
+}
+
+main form .tip-box{
+  margin: 30px 0;
+}
+
+main form .tip-box .label-group{
+  margin-bottom: 10px;
+}
+
+main .dashboard{
+  max-width: 100%;
+  background-color: var(--veryDarkCyan);
+  border-radius: 25px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 25px 20px;
+  height: 300px;
+}
+
+main .dashboard .price-view{
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+main .dashboard .price-view .amount-view{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main .dashboard .price-view .amount-view h1{
+  color: var(--strongCyan);
+  font-size: 40px;
+}
+
+main .dashboard .price-view .amount-view h3{
+  color: white;
+}
+
+main .dashboard .price-view .amount-view h3 span{
+  color: var(--grayishCyan);
+}
+
+main .dashboard .reset{
+  width: 100%;
+  background-color: var(--strongCyan);
+  color: var(--veryDarkCyan);
+  text-decoration: none;
+  text-align: center;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+main .dashboard .reset:hover{
+  background-color: var(--lightGrayishCyan);
+  transition: background-color 0.3s ease;
+}
+
+.logo{
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+
+@media (max-width:756px){
+  main{
+    flex-direction: column;
+    width: 100%;
+  }
+  main form{
+    margin-bottom:15px;
+  }
+}

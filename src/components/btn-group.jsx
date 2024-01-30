@@ -9,7 +9,7 @@ const BtnGroup = (props) => {
                 {
                     props.tips.map(tip=>{
                         return(
-                            <a key={tip.id} onClick={(()=>{props.setRate(tip)})} href='#' className='tipA'>{tip.tipamount*100}</a>
+                            <a key={tip.id} onClick={(()=>{props.setRate(tip)})} href='#' className='tipA'>{tip.tipamount*100}%</a>
                         )
                     })
                 }
